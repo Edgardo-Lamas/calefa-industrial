@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Ingeniería Térmica</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Ingeniería Térmica</h1>
+      <nav>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#equipos">Equipos</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<!--
+  <section class="hero">
+    <div class="container">
+      <h2>Soluciones en calefacción industrial</h2>
+      <p>Proyectos térmicos integrales, venta de equipos y mantenimiento especializado.</p>
+      <a href="#contacto" class="btn">Solicitar información</a>
+    </div>
+  </section>
+-->
+
+  <!-- Dentro de <body> reemplazando la sección hero anterior -->
+<section class="hero-slider">
+  <div class="slide active" style="background-image:url('img/foto1.jpg')">
+    <div class="overlay">
+      <h2>Calefacción industrial a medida</h2>
+      <a href="proyectos.html" class="btn">Ver proyectos</a>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url('img/foto2.jpg')">
+    <div class="overlay">
+      <h2>Equipos de alta eficiencia</h2>
+      <a href="equipos.html" class="btn">Ver catálogo</a>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url('img/foto3.jpg')">
+    <div class="overlay">
+      <h2>Soporte técnico especializado</h2>
+      <a href="contacto.html" class="btn">Solicitar asesoramiento</a>
+    </div>
+  </div>
+
+  <!-- Controles opcionales -->
+  <button class="prev">&lsaquo;</button>
+  <button class="next">&rsaquo;</button>
+</section>
+
+<!-- JavaScript al final del body -->
+
+
+
+
+
+
+
+
+
+  <section id="servicios" class="servicios">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="grid">
+        <div class="servicio">
+          <h3>Instalación de Sistemas</h3>
+          <p>Diseño e implementación de soluciones térmicas a medida.</p>
+        </div>
+        <div class="servicio">
+          <h3>Venta de Equipos</h3>
+          <p>Calderas, calentadores, sistemas eléctricos e infrarrojos.</p>
+        </div>
+        <div class="servicio">
+          <h3>Mantenimiento</h3>
+          <p>Preventivo, correctivo y asistencia técnica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipos" class="equipos">
+    <div class="container">
+      <h2>Equipos Destacados</h2>
+      <div class="grid">
+        <div class="equipo">Equipo 1</div>
+        <div class="equipo">Equipo 2</div>
+        <div class="equipo">Equipo 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="proyectos">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <p>Conocé nuestras obras más destacadas y los resultados obtenidos.</p>
+    </div>
+  </section>
+
+  <section id="nosotros" class="nosotros">
+    <div class="container">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos un equipo de profesionales técnicos e ingenieros especializados en sistemas de calefacción industrial.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ingeniería Térmica. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script>
+  const slides = document.querySelectorAll('.hero-slider .slide');
+  const prev = document.querySelector('.hero-slider .prev');
+  const next = document.querySelector('.hero-slider .next');
+  let current = 0;
+
+  function showSlide(idx) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === idx);
+    });
+  }
+
+  function goNext() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function goPrev() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  next.addEventListener('click', goNext);
+  prev.addEventListener('click', goPrev);
+
+  // Avance automático
+  setInterval(goNext, 6000);
+</script>
+</body>
+</html>
