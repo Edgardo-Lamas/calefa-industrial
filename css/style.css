@@ -196,3 +196,55 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .hero-slider .slide .content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero-slider .slide h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-slider .slide p {
+    font-size: 1rem;
+  }
+
+  .hero-slider .slide .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+

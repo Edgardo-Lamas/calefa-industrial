@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio | Ingeniería Térmica</title>
+  <title>Inicio | Indutherm Soluciones</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Ingeniería Térmica</h1>
+      <h1>Indutherm Soluciones</h1>
       <nav>
         <ul>
           <li><a href="#servicios">Servicios</a></li>
@@ -21,6 +21,8 @@
         </ul>
       </nav>
     </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
   </header>
 <!--
   <section class="hero">
@@ -158,5 +160,12 @@
   // Avance automático
   setInterval(goNext, 6000);
 </script>
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>
