@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios | Indutherm Soluciones</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="../index.html" class="logo"><img src="../img/logo utilizado.png" alt="Indutherm Logo"></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="servicios.html" class="active">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-servicios">
+      <div class="hero-text">
+        <h1>Nuestros Servicios Principales</h1>
+        <p>Soluciones técnicas especializadas en ingeniería térmica industrial</p>
+      </div>
+    </section>
+
+    <section class="servicios-categorias">
+      <div class="servicio-cat">
+        <a href="instalacion.html">
+          <img src="../img/proyectos.jpg" alt="">
+          <h3>Instalación y Proyectos</h3>
+        </a>
+      </div>
+      <div class="servicio-cat">
+        <a href="comercializacion.html">
+          <img src="../img/comercializacion.jpg" alt="">
+          <h3>Comercialización de Equipos</h3>
+        </a>
+      </div>
+      <div class="servicio-cat">
+        <a href="mantenimiento.html">
+          <img src="../img/mantinimiento.jpg" alt="">
+          <h3>Mantenimiento y Soporte</h3>
+        </a>
+      </div>
+    </section>
+
+    <section class="servicios-informativos">
+        <h2>Ingeniería que transforma el calor en eficiencia</h2>
+    <p>
+      En <strong>Indutherm Soluciones</strong> aplicamos ingeniería HVAC de alto rendimiento para ofrecer soluciones térmicas confiables, seguras y eficientes. 
+      No solo instalamos equipos: diseñamos sistemas pensados para durar, adaptados a cada entorno industrial o logístico. 
+      Con experiencia técnica y compromiso, acompañamos cada proyecto desde la idea hasta su operación sostenida en el tiempo.
+    </p>
+        <img src="" alt="">
+
+    </section>
+
+    <section class="servicios-adicionales">
+      <h2>Servicios Adicionales</h2>
+      <div class="adicionales-grid">
+        <div class="adicional">
+          <img src="img/icono-auditoria.png" alt="">
+          <h4>Auditorías energéticas</h4>
+          <p>Diagnóstico técnico para optimizar consumo energético.</p>
+        </div>
+        <div class="adicional">
+          <img src="img/icono-repuestos.png" alt="">
+          <h4>Repuestos</h4>
+          <p>Provisión de repuestos originales para sistemas térmicos.</p>
+        </div>
+        <div class="adicional">
+          <img src="img/icono-capacitacion.png" alt="">
+          <h4>Capacitación</h4>
+          <p>Formación técnica a operarios y supervisores.</p>
+        </div>
+        <div class="adicional">
+          <img src="img/icono-asesoramiento.png" alt="">
+          <h4>Asesoramiento</h4>
+          <p>Consultoría estratégica para proyectos térmicos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Indutherm Soluciones. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+  const aparecer = document.querySelectorAll('.servicio-cat, .adicional');
+
+  function mostrarAlScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    aparecer.forEach((item) => {
+      const top = item.getBoundingClientRect().top;
+      if (top < trigger) {
+        item.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', mostrarAlScroll);
+  window.addEventListener('load', mostrarAlScroll);
+</script>
+
+</body>
+</html>

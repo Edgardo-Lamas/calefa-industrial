@@ -18,7 +18,10 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 header {
@@ -27,10 +30,6 @@ header {
   padding: 1rem 0;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
 
 nav ul {
   list-style: none;
@@ -39,10 +38,15 @@ nav ul {
   flex-wrap: wrap;
 }
 
-nav a {
+nav a  {
   color: white;
   text-decoration: none;
   font-weight: 500;
+}
+.container .logo img{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
 }
 
 /*
@@ -216,7 +220,7 @@ footer {
     padding: 0.6rem 1.2rem;
   }
 
-  
+
 }
 .menu-toggle {
   display: none;
@@ -248,3 +252,229 @@ footer {
 }
 
 
+/*SERVICIOS - SERVICIOS - SERVICIOS*/
+
+/* === Página de Servicios === */
+/* === RESET Y FUENTE === */
+/* === RESET Y FUENTE === */
+/* === RESET Y FUENTE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* === NAVBAR === */
+.header {
+  background: #222;
+  padding: 0.75rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #e94d1a;
+}
+
+/* === HERO === */
+.hero-servicios {
+  background: linear-gradient(to right, #202124, #434345);
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero-servicios h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-servicios p {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+
+/* === CATEGORÍAS DE SERVICIOS === */
+.servicios-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicio-cat a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.servicio-cat img {
+  width: 200;
+  height: 500px;
+  margin-bottom: 1rem;
+}
+
+.servicio-cat h3 {
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.servicio-cat:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.servicio-cat:hover h3 {
+  color: #e94d1a;
+}
+
+/*SERVICIOS INFORAMATIVOS========*/
+
+.servicios-informativos {
+  max-width: 1000px;
+  height: 400px;
+  background-color: #333;
+  margin: 0 auto; /* Centra horizontalmente */
+  display: flex; /* Prepara para centrar también el contenido interno si querés */
+  justify-content: center; /* Centrado horizontal interno */
+  flex-direction: column;
+  align-items: center;     /* Centrado vertical interno */
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.servicios-informativos h2{
+  color: white;
+}
+.servicios-informativos p{
+  text-align: justify;
+}
+
+
+/* === SERVICIOS ADICIONALES === */
+.servicios-adicionales {
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.servicios-adicionales h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.adicionales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.adicional {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: box-shadow 0.3s ease;
+}
+
+.adicional img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.adicional h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.adicional:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* === FOOTER === */
+.footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* === ANIMACIÓN AL HACER SCROLL === */
+.servicio-cat,
+.adicional {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.servicio-cat.visible,
+.adicional.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-servicios h1 {
+    font-size: 2rem;
+  }
+
+  .hero-servicios p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
