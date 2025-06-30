@@ -9,16 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <a href="../index.html" class="logo"><img src="../img/logo utilizado.png" alt="Indutherm Logo"></a>
-      <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="servicios.html" class="active">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  
+<header class="header">
+  <nav class="navbar">
+    <a href="index.html" class="logo"><img src="../img/logo site 3.png" alt="Indutherm Logo"></a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="servicios.html" class="active">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <main>
     <section class="hero-servicios">
@@ -106,6 +109,18 @@
 
   window.addEventListener('scroll', mostrarAlScroll);
   window.addEventListener('load', mostrarAlScroll);
+</script>
+  <script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+
+  // Cierra el menú cuando se hace clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+    });
+  });
 </script>
 
 </body>

@@ -44,10 +44,61 @@ nav a  {
   font-weight: 500;
 }
 .container .logo img{
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: 90px;
   border-radius: 10px;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 1.5rem;
+    width: calc(100% - 3rem);
+    border-radius: 6px;
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
 
 /*
 .hero {
@@ -251,6 +302,54 @@ footer {
   }
 }
 
+/*nueva aseccion nueva seccion nueva seccion*/
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 1.5rem;
+    width: calc(100% - 3rem);
+    border-radius: 6px;
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
 
 /*SERVICIOS - SERVICIOS - SERVICIOS*/
 
@@ -287,8 +386,8 @@ body {
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: 80px;
   border-radius: 10px;
 }
 
