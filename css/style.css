@@ -1,3 +1,116 @@
+/* Separador visual entre secciones */
+.separador-linea {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 4.5rem 0 3.5rem 0;
+  width: 100%;
+  opacity: 0.7;
+}
+
+/* Nueva disposición superpuesta para proyectos-home */
+.proyectos-home {
+  background: #f8f9fa;
+  padding: 3.5rem 0 3.5rem 0;
+  margin-bottom: 3.5rem;
+}
+.proyectos-superpuesta {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proyectos-titulo {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #e94d1a;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.proyectos-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+  width: 100%;
+}
+.proyecto-superpuesto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  position: relative;
+}
+.proyecto-img.plano {
+  width: 370px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: #fff;
+  transition: none;
+}
+.proyecto-texto {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 12px #e94d1a11;
+  padding: 2.2rem 2.5rem;
+  min-width: 260px;
+  max-width: 340px;
+  text-align: left;
+  z-index: 2;
+}
+.proyecto-texto h4 {
+  font-size: 1.18rem;
+  color: #e94d1a;
+  margin-bottom: 0.7rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s 0.2s forwards;
+}
+.proyecto-texto p {
+  font-size: 1.02rem;
+  color: #222;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s 0.5s forwards;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1100px) {
+  .proyectos-superpuesta {
+    max-width: 98vw;
+  }
+  .proyecto-img.plano {
+    width: 98vw;
+    max-width: 340px;
+    height: 160px;
+  }
+  .proyectos-stack {
+    gap: 2.2rem;
+  }
+  .proyecto-superpuesto {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .proyecto-texto {
+    padding: 1.2rem 1.1rem;
+    min-width: 0;
+    max-width: 98vw;
+  }
+}
+/* Ajuste real de tamaño para el título de la sección de mantenimiento */
+.separador-texto h2 {
+  color: #e94d1a;
+  font-size: 1.25rem;
+  margin-bottom: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
 /* === SEPARADOR DISRUPTIVO IMPACTANTE === */
 .separador-disruptivo {
   width: 100%;
@@ -22,23 +135,33 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+/* Imagen de mantenimiento: simetría y proporción con el texto */
 .separador-icono img {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
+  max-width: 400px;
+  max-height: 350px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   filter: drop-shadow(0 4px 16px #e94d1a33);
   background: #fff;
-  border-radius: 50%;
-  padding: 1.2rem;
+  border-radius: 18px;
+  padding: 0;
   border: 3.5px solid #e94d1a22;
+  display: block;
+  margin: 0 auto;
 }
-.separador-texto {
+}
   flex: 1 1 320px;
   min-width: 260px;
 }
-.separador-texto h2 {
+
+/* Justificar los párrafos de la sección separador-disruptivo */
+  text-align: justify;
+  font-size: 0.98rem;
+}
+}
   color: #e94d1a;
-  font-size: 2.1rem;
+  font-size: 1.45rem;
   margin-bottom: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -76,6 +199,10 @@
     text-align: center;
   }
   .separador-icono img {
+    max-width: 90vw;
+    max-height: 220px;
+    width: 100%;
+    height: auto;
     margin-bottom: 1rem;
   }
 }
@@ -269,15 +396,23 @@ body {
   color: #222;
 }
 
+/* Menor altura para header más compacto */
+/* Restaurar header a tamaño cómodo */
 .main-header {
   background: #1f2937;
   color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-height: 90px;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
+}
+/* Logo tamaño original para header cómodo */
 .main-header .logo img {
   width: 160px;
   height: 90px;
   border-radius: 10px;
+  object-fit: contain;
 }
 .main-header nav .nav-links a {
   color: #fff;
@@ -782,8 +917,9 @@ nav a  {
 
 .hero-slider {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
+  margin-top: 1.2rem;
 }
 
 .hero-slider .slide {
