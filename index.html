@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,25 +12,21 @@
 </head>
 <body>
   <header>
-  <div class="container">
-    <div class="logo">
-      <a href="./index.html"><img src="./img/logo site 3.png" alt=""></a>
+    <div class="container">
+      <div class="logo">
+        <a href="./index.html"><img src="./img/logo site 3.png" alt=""></a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú" tabindex="0">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./page/servicios.html">Servicios</a></li>
+          <li><a href="./page/proyectos.html">Proyectos</a></li>
+          <li><a href="./page/nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="./page/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- Botón hamburguesa dentro del contenedor -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <nav>
-      <ul class="nav-links">
-        <li><a href="./page/servicios.html">Servicios</a></li>
-        <li><a href="#equipos">Equipos</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 
 <!--
   <section class="hero">
@@ -158,24 +156,25 @@
   // Avance automático
   setInterval(goNext, 6000);
 </script>
-<script>
-  function toggleMenu() {
-    const menu = document.querySelector("nav ul");
-    menu.classList.toggle("active");
-  }
-</script>
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-
-  // Cierra el menú cuando se hace clic en un enlace
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.remove('active');
+  <script>
+    // Unifica el control del menú hamburguesa y el cierre automático
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      // Mostrar/ocultar menú
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+      // Cierra el menú al hacer clic en un enlace
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>

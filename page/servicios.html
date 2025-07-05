@@ -60,9 +60,26 @@
       Con experiencia técnica y compromiso, acompañamos cada proyecto desde la idea hasta su operación sostenida en el tiempo.
     </p>
         <img src="" alt="">
-
     </section>
 
+    <section class="servicio-bloque auditorias-energeticas">
+      <div class="contenido">
+          <h2>Auditorías Energéticas</h2>
+          <p>
+          Evaluamos el rendimiento térmico de sistemas de calefacción industrial para detectar ineficiencias, optimizar consumos y mejorar la rentabilidad energética.
+          Realizamos auditorías en calderas, redes de distribución, aislación térmica y automatización de controles. Nuestras auditorías permiten planificar inversiones estratégicas para reducir el consumo y cumplir con normativas ambientales.
+          </p>
+     </div>
+        <div class="imagenes">
+          <img src="./img/auditoria1.jpg" alt="Auditoría de calderas industriales">
+          <img src="./img/auditoria2.jpg" alt="Inspección térmica de instalaciones">
+          <img src="./img/auditoria3.jpg" alt="Análisis energético de sistemas HVAC">
+        </div>
+    </section>
+
+
+
+    <!-- 
     <section class="servicios-adicionales">
       <h2>Servicios Adicionales</h2>
       <div class="adicionales-grid">
@@ -88,40 +105,37 @@
         </div>
       </div>
     </section>
+     -->
+
+
+
+
   </main>
+
 
   <footer class="footer">
     <p>&copy; 2025 Indutherm Soluciones. Todos los derechos reservados.</p>
   </footer>
   <script>
-  const aparecer = document.querySelectorAll('.servicio-cat, .adicional');
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-links');
+      menu.classList.toggle('active');
+    }
 
-  function mostrarAlScroll() {
-    const trigger = window.innerHeight * 0.85;
-
-    aparecer.forEach((item) => {
-      const top = item.getBoundingClientRect().top;
-      if (top < trigger) {
-        item.classList.add('visible');
-      }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
     });
-  }
 
-  window.addEventListener('scroll', mostrarAlScroll);
-  window.addEventListener('load', mostrarAlScroll);
-</script>
-  <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-  }
-
-  // Cierra el menú cuando se hace clic en un enlace
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.remove('active');
+    // Mostrar las tarjetas de servicios al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.servicio-cat').forEach(function(card) {
+        card.classList.add('visible');
+      });
     });
-  });
-</script>
+  </script>
+
 
 </body>
 </html>
