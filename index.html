@@ -48,7 +48,7 @@
         <a href="./page/contacto.html" class="btn">Solicitar asesoramiento</a>
       </div>
     </div>
-    <!-- Controles opcionales -->
+    <!-- Controles opcionales -->ok. Te 
     <button class="prev" aria-label="Anterior">&lsaquo;</button>
     <button class="next" aria-label="Siguiente">&rsaquo;</button>
   </section>
@@ -169,33 +169,34 @@
     </div>
   </footer>
   <script>
-  const slides = document.querySelectorAll('.hero-slider .slide');
-  const prev = document.querySelector('.hero-slider .prev');
-  const next = document.querySelector('.hero-slider .next');
-  let current = 0;
+    // Script del slider solo en index
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    const prev = document.querySelector('.hero-slider .prev');
+    const next = document.querySelector('.hero-slider .next');
+    let current = 0;
 
-  function showSlide(idx) {
-    slides.forEach((s, i) => {
-      s.classList.toggle('active', i === idx);
-    });
-  }
+    function showSlide(idx) {
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+      });
+    }
 
-  function goNext() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
+    function goNext() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
 
-  function goPrev() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  }
+    function goPrev() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
 
-  next.addEventListener('click', goNext);
-  prev.addEventListener('click', goPrev);
+    next.addEventListener('click', goNext);
+    prev.addEventListener('click', goPrev);
 
-  // Avance automático
-  setInterval(goNext, 6000);
-</script>
+    // Avance automático
+    setInterval(goNext, 6000);
+  </script>
   <script>
     // Unifica el control del menú hamburguesa y el cierre automático
     document.addEventListener('DOMContentLoaded', function() {

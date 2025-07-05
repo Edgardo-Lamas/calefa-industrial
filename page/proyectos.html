@@ -8,18 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <a href="../index.html" class="logo"><img src="../img/logo site 3.png" alt="Indutherm Logo"></a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="proyectos.html" class="active">Proyectos</a></li>
-        <li><a href="nosotros.html">Sobre Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo site 3.png" alt="Indutherm Soluciones"></a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú" tabindex="0">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html" class="active">Proyectos</a></li>
+          <li><a href="nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <section class="hero-servicios">
@@ -68,6 +71,23 @@
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
+  <script>
+    // Unifica el control del menú hamburguesa y el cierre automático
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
       });
     });
   </script>
