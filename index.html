@@ -28,30 +28,63 @@
     </div>
   </header>
 
-  <section class="hero-impacto" style="background-image:url('img/foto1.jpg')">
-    <div class="hero-overlay">
-      <h1>Soluciones inteligentes en calefacción industrial</h1>
-      <p>Automatización, eficiencia energética y energías renovables para la industria moderna</p>
-      <a href="./page/servicios.html" class="btn btn-cta">Ver servicios</a>
+  <!-- HERO SLIDER PRINCIPAL -->
+  <section class="hero-slider">
+    <div class="slide active" style="background-image:url('./img/termica5.jpg')">
+      <div class="overlay">
+        <h2>Calefacción industrial a medida</h2>
+        <a href="./page/proyectos.html" class="btn">Ver proyectos</a>
+      </div>
     </div>
+    <div class="slide" style="background-image:url('./img/termica1.png')">
+      <div class="overlay">
+        <h2>Equipos de alta eficiencia</h2>
+        <a href="./page/servicios.html" class="btn">Ver servicios</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('./img/termica6.jpg')">
+      <div class="overlay">
+        <h2>Soporte técnico especializado</h2>
+        <a href="./page/contacto.html" class="btn">Solicitar asesoramiento</a>
+      </div>
+    </div>
+    <!-- Controles opcionales -->
+    <button class="prev" aria-label="Anterior">&lsaquo;</button>
+    <button class="next" aria-label="Siguiente">&rsaquo;</button>
   </section>
 
   <section class="destacados">
     <div class="container destacados-grid">
-      <div class="destacado-block">
-        <img src="img/icon-automatizacion.svg" alt="Automatización" class="icono-destacado">
-        <h3>Automatización y Control</h3>
-        <p>Desarrollamos sistemas inteligentes para monitoreo, control remoto y optimización de procesos térmicos industriales.</p>
+      <a href="#" class="destacado-link">
+        <img src="./img/automatizacion.png" alt="Automatización y Control" class="destacado-img">
+        <div class="destacado-titulo">Automatización y Control</div>
+      </a>
+      <a href="#" class="destacado-link">
+        <img src="./img/energias renovables.png" alt="Energías Renovables" class="destacado-img">
+        <div class="destacado-titulo">Energías Renovables</div>
+      </a>
+      <a href="#" class="destacado-link">
+        <img src="./img/ahorro energetico.png" alt="Eficiencia y Ahorro" class="destacado-img">
+        <div class="destacado-titulo">Eficiencia y Ahorro</div>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- SEPARADOR DISRUPTIVO IMPACTANTE -->
+  <section class="separador-disruptivo">
+    <div class="separador-disruptivo-content">
+      <div class="separador-icono">
+        <img src="./img/ahorro energetico.png" alt="Beneficio económico" />
       </div>
-      <div class="destacado-block">
-        <img src="img/icon-renovable.svg" alt="Energías renovables" class="icono-destacado">
-        <h3>Energías Renovables</h3>
-        <p>Integramos biomasa, solar y otras fuentes limpias para reducir costos y huella ambiental en tus instalaciones.</p>
-      </div>
-      <div class="destacado-block">
-        <img src="img/icon-eficiencia.svg" alt="Eficiencia" class="icono-destacado">
-        <h3>Eficiencia y Ahorro</h3>
-        <p>Soluciones a medida para maximizar el rendimiento energético y cumplir normativas internacionales.</p>
+      <div class="separador-texto">
+        <h2>¿Por qué invertir en mantenimiento y renovación?</h2>
+        <ul>
+          <li><strong>Reduce imprevistos y paradas:</strong> Menos fallas, más producción.</li>
+          <li><strong>Ahorro económico real:</strong> El mantenimiento preventivo puede ahorrar hasta el 80% en reparaciones.</li>
+          <li><strong>Retorno positivo:</strong> No es un gasto, es una inversión que se recupera a mediano y largo plazo.</li>
+        </ul>
+        <a href="./page/contacto.html" class="btn btn-cta separador-btn">Solicita tu diagnóstico gratuito</a>
       </div>
     </div>
   </section>
@@ -61,25 +94,19 @@
       <h2>Proyectos destacados</h2>
       <div class="proyectos-grid">
         <div class="proyecto-card">
-          <img src="img/proyectos.jpg" alt="Proyecto 1">
-          <div>
-            <h4>Industria alimenticia</h4>
-            <p>Automatización y eficiencia en planta de producción, reducción del 30% en consumo energético.</p>
-          </div>
+          <img src="img/proyectos.jpg" alt="Industria alimenticia">
+          <h4>Industria alimenticia</h4>
+          <p>Automatización y eficiencia en planta de producción, reducción del 30% en consumo energético.</p>
         </div>
         <div class="proyecto-card">
-          <img src="img/foto2.jpg" alt="Proyecto 2">
-          <div>
-            <h4>Depósito logístico</h4>
-            <p>Solución térmica renovable, temperatura estable y bajo mantenimiento.</p>
-          </div>
+          <img src="img/foto2.jpg" alt="Depósito logístico">
+          <h4>Depósito logístico</h4>
+          <p>Solución térmica renovable, temperatura estable y bajo mantenimiento.</p>
         </div>
         <div class="proyecto-card">
-          <img src="img/foto3.jpg" alt="Proyecto 3">
-          <div>
-            <h4>Industria farmacéutica</h4>
-            <p>Control inteligente HVAC, monitoreo remoto y cumplimiento normativo.</p>
-          </div>
+          <img src="img/foto3.jpg" alt="Industria farmacéutica">
+          <h4>Industria farmacéutica</h4>
+          <p>Control inteligente HVAC, monitoreo remoto y cumplimiento normativo.</p>
         </div>
       </div>
       <a href="./page/proyectos.html" class="btn btn-secundario">Ver más proyectos</a>
@@ -108,31 +135,7 @@
   </section>
 -->
 
-  <!-- Dentro de <body> reemplazando la sección hero anterior -->
-<section class="hero-slider">
-  <div class="slide active" style="background-image:url('img/foto1.jpg')">
-    <div class="overlay">
-      <h2>Calefacción industrial a medida</h2>
-      <a href="proyectos.html" class="btn">Ver proyectos</a>
-    </div>
-  </div>
-  <div class="slide" style="background-image:url('img/foto2.jpg')">
-    <div class="overlay">
-      <h2>Equipos de alta eficiencia</h2>
-      <a href="equipos.html" class="btn">Ver catálogo</a>
-    </div>
-  </div>
-  <div class="slide" style="background-image:url('img/foto3.jpg')">
-    <div class="overlay">
-      <h2>Soporte técnico especializado</h2>
-      <a href="contacto.html" class="btn">Solicitar asesoramiento</a>
-    </div>
-  </div>
-
-  <!-- Controles opcionales -->
-  <button class="prev">&lsaquo;</button>
-  <button class="next">&rsaquo;</button>
-</section>
+  <!-- ...existing code... -->
 
 <!-- JavaScript al final del body -->
 
@@ -155,9 +158,9 @@
       <div class="footer-redes">
         <h4>Seguinos</h4>
         <div class="redes-icons">
-          <a href="#" title="LinkedIn" class="footer-icon" target="_blank"> <img src="./img/icon-linkedin.svg" alt="LinkedIn"> </a>
-          <a href="#" title="Instagram" class="footer-icon" target="_blank"> <img src="./img/icon-instagram.svg" alt="Instagram"> </a>
-          <a href="#" title="WhatsApp" class="footer-icon" target="_blank"> <img src="./img/icon-whatsapp.svg" alt="WhatsApp"> </a>
+          <a href="#" title="LinkedIn" class="footer-icon" target="_blank"> <img src="./img/linkedin.svg" alt="LinkedIn"> </a>
+          <a href="#" title="Instagram" class="footer-icon" target="_blank"> <img src="./img/instagram.svg" alt="Instagram"> </a>
+          <a href="#" title="WhatsApp" class="footer-icon" target="_blank"> <img src="./img/whatsapp.svg" alt="WhatsApp"> </a>
         </div>
       </div>
     </div>
