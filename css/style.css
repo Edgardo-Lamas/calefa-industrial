@@ -484,8 +484,8 @@ body {
     padding: 2rem 1rem;
   }
 }
-/* --- MENÚ HAMBURGUESA Y NAV RESPONSIVE --- */
 
+/* --- MENÚ HAMBURGUESA Y NAV RESPONSIVE UNIFICADO --- */
 .main-header .menu-toggle {
   display: none;
   background: none;
@@ -493,107 +493,107 @@ body {
   font-size: 2rem;
   cursor: pointer;
   color: #fff;
-  z-index: 1002;
+  z-index: 1200;
+  position: absolute;
+  top: 18px;
+  right: 24px;
 }
 
 @media (max-width: 900px) {
+  .main-header {
+    position: relative;
+    z-index: 1000;
+  }
   .main-header .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
-  .main-header nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border-radius: 0 0 0 10px;
-    transition: transform 0.3s;
-    transform: translateX(100%);
-    z-index: 1001;
+    position: relative;
   }
   .main-header .menu-toggle {
     display: block;
   }
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-  }
-  .nav-links li {
-    border-bottom: 1px solid #eee;
-    width: 100%;
-  }
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
-  .nav-links a {
-    display: block;
-    padding: 1rem 1.5rem;
-    color: #333;
-    text-decoration: none;
-    width: 100%;
-    transition: background 0.2s;
-  }
-  .nav-links a:hover {
-    background: #f5f5f5;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  nav .nav-links {
-    display: none;
-  }
-  nav .nav-links.active {
-    display: flex;
-    flex-direction: column;
-  }
-  nav {
-    transform: translateX(100%);
-  }
-  nav .nav-links.active {
-    /* Cuando el menú está activo, nav se muestra */
-    display: flex;
-  }
-  nav .nav-links.active ~ nav {
-    transform: translateX(0);
-  }
-  nav.active, .nav-links.active {
-    transform: translateX(0);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-}
-
-@media (max-width: 900px) {
-  header {
-    position: relative;
-    z-index: 1000;
-  }
-  nav {
+  .main-header nav {
     position: absolute;
     top: 60px;
     right: 0;
     width: 220px;
-    background: #fff;
+    background: #222;
     border-radius: 0 0 0 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-    transform: translateX(100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
     z-index: 1001;
+    padding: 0;
   }
-  nav .nav-links.active {
-    display: flex;
+  .main-header nav .nav-links {
+    display: none;
     flex-direction: column;
-    transform: translateX(0);
+    background-color: #222;
+    width: 100%;
+    border-radius: 0 0 0 10px;
+    padding: 0.5rem 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: none;
   }
-  .menu-toggle.active {
-    color: #0077c8;
+  .main-header nav .nav-links.active {
+    display: flex;
+  }
+  .main-header .nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #3333;
+  }
+  .main-header .nav-links li:last-child {
+    border-bottom: none;
+  }
+  .main-header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: background 0.2s;
+  }
+  .main-header .nav-links a:hover {
+    background: #e94d1a;
+    color: #fff;
+  }
+}
+
+@media (min-width: 900px) {
+  .main-header .menu-toggle {
+    display: none !important;
+  }
+  .main-header nav {
+    position: static;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+  }
+  .main-header .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    border-radius: 0;
+    gap: 2rem;
+    box-shadow: none;
+  }
+  .main-header .nav-links li {
+    border-bottom: none;
+    padding: 0;
+  }
+  .main-header .nav-links a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: none;
+  }
+  .main-header .nav-links a:hover {
+    background: #f5f5f5;
+    color: #e94d1a;
   }
 }
 
