@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <header>
+  <header class="main-header">
     <div class="container">
       <div class="logo">
-        <a href="./index.html"><img src="./img/logo site 3.png" alt=""></a>
+        <a href="./index.html"><img src="./img/logo site 3.png" alt="Indutherm Soluciones"></a>
       </div>
       <button class="menu-toggle" aria-label="Abrir menú" tabindex="0">☰</button>
       <nav>
@@ -27,6 +27,76 @@
       </nav>
     </div>
   </header>
+
+  <section class="hero-impacto" style="background-image:url('img/foto1.jpg')">
+    <div class="hero-overlay">
+      <h1>Soluciones inteligentes en calefacción industrial</h1>
+      <p>Automatización, eficiencia energética y energías renovables para la industria moderna</p>
+      <a href="./page/servicios.html" class="btn btn-cta">Ver servicios</a>
+    </div>
+  </section>
+
+  <section class="destacados">
+    <div class="container destacados-grid">
+      <div class="destacado-block">
+        <img src="img/icon-automatizacion.svg" alt="Automatización" class="icono-destacado">
+        <h3>Automatización y Control</h3>
+        <p>Desarrollamos sistemas inteligentes para monitoreo, control remoto y optimización de procesos térmicos industriales.</p>
+      </div>
+      <div class="destacado-block">
+        <img src="img/icon-renovable.svg" alt="Energías renovables" class="icono-destacado">
+        <h3>Energías Renovables</h3>
+        <p>Integramos biomasa, solar y otras fuentes limpias para reducir costos y huella ambiental en tus instalaciones.</p>
+      </div>
+      <div class="destacado-block">
+        <img src="img/icon-eficiencia.svg" alt="Eficiencia" class="icono-destacado">
+        <h3>Eficiencia y Ahorro</h3>
+        <p>Soluciones a medida para maximizar el rendimiento energético y cumplir normativas internacionales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proyectos-home">
+    <div class="container">
+      <h2>Proyectos destacados</h2>
+      <div class="proyectos-grid">
+        <div class="proyecto-card">
+          <img src="img/proyectos.jpg" alt="Proyecto 1">
+          <div>
+            <h4>Industria alimenticia</h4>
+            <p>Automatización y eficiencia en planta de producción, reducción del 30% en consumo energético.</p>
+          </div>
+        </div>
+        <div class="proyecto-card">
+          <img src="img/foto2.jpg" alt="Proyecto 2">
+          <div>
+            <h4>Depósito logístico</h4>
+            <p>Solución térmica renovable, temperatura estable y bajo mantenimiento.</p>
+          </div>
+        </div>
+        <div class="proyecto-card">
+          <img src="img/foto3.jpg" alt="Proyecto 3">
+          <div>
+            <h4>Industria farmacéutica</h4>
+            <p>Control inteligente HVAC, monitoreo remoto y cumplimiento normativo.</p>
+          </div>
+        </div>
+      </div>
+      <a href="./page/proyectos.html" class="btn btn-secundario">Ver más proyectos</a>
+    </div>
+  </section>
+
+  <section class="cta-contacto">
+    <div class="container cta-flex">
+      <div>
+        <h2>¿Listo para optimizar tu sistema térmico?</h2>
+        <p>Contactanos para un diagnóstico gratuito o suscribite a nuestro newsletter de innovación industrial.</p>
+      </div>
+      <div>
+        <a href="./page/contacto.html" class="btn btn-cta">Solicitar asesoramiento</a>
+      </div>
+    </div>
+  </section>
 
 <!--
   <section class="hero">
@@ -66,66 +136,33 @@
 
 <!-- JavaScript al final del body -->
 
-  <section id="servicios" class="servicios">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="grid">
-        <div class="servicio">
-          <h3>Instalación de Sistemas</h3>
-          <p>Diseño e implementación de soluciones térmicas a medida.</p>
-        </div>
-        <div class="servicio">
-          <h3>Venta de Equipos</h3>
-          <p>Calderas, calentadores, sistemas eléctricos e infrarrojos.</p>
-        </div>
-        <div class="servicio">
-          <h3>Mantenimiento</h3>
-          <p>Preventivo, correctivo y asistencia técnica.</p>
+
+
+  <footer class="footer-pro">
+    <div class="container footer-flex">
+      <div class="footer-brand">
+        <img src="./img/logo site 3.png" alt="Indutherm Soluciones" class="footer-logo">
+        <p class="footer-frase">"Transformamos energía en eficiencia y futuro"</p>
+      </div>
+      <div class="footer-contacto">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@indutherm.com.ar"><span>✉️</span> info@indutherm.com.ar</a></li>
+          <li><span>📍</span> Av. Industria 1234, CABA, Argentina</li>
+          <li><a href="tel:+541123456789"><span>📞</span> +54 11 2345-6789</a></li>
+        </ul>
+      </div>
+      <div class="footer-redes">
+        <h4>Seguinos</h4>
+        <div class="redes-icons">
+          <a href="#" title="LinkedIn" class="footer-icon" target="_blank"> <img src="./img/icon-linkedin.svg" alt="LinkedIn"> </a>
+          <a href="#" title="Instagram" class="footer-icon" target="_blank"> <img src="./img/icon-instagram.svg" alt="Instagram"> </a>
+          <a href="#" title="WhatsApp" class="footer-icon" target="_blank"> <img src="./img/icon-whatsapp.svg" alt="WhatsApp"> </a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="equipos" class="equipos">
-    <div class="container">
-      <h2>Equipos Destacados</h2>
-      <div class="grid">
-        <div class="equipo">Equipo 1</div>
-        <div class="equipo">Equipo 2</div>
-        <div class="equipo">Equipo 3</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proyectos" class="proyectos">
-    <div class="container">
-      <h2>Proyectos</h2>
-      <p>Conocé nuestras obras más destacadas y los resultados obtenidos.</p>
-    </div>
-  </section>
-
-  <section id="nosotros" class="nosotros">
-    <div class="container">
-      <h2>Sobre Nosotros</h2>
-      <p>Somos un equipo de profesionales técnicos e ingenieros especializados en sistemas de calefacción industrial.</p>
-    </div>
-  </section>
-
-  <section id="contacto" class="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <form>
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Ingeniería Térmica. Todos los derechos reservados.</p>
+    <div class="footer-copy">
+      <p>&copy; 2025 Indutherm Soluciones. Todos los derechos reservados.</p>
     </div>
   </footer>
   <script>
