@@ -290,39 +290,53 @@
   color: #fff;
   padding: 2.5rem 0 0.5rem 0;
   margin-top: 2rem;
+  width: 100%;
 }
 .footer-flex {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5rem;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
-.footer-brand {
-  flex: 1 1 220px;
-  min-width: 200px;
-  text-align: left;
+
+/* Footer columns unified for symmetry */
+.footer-col {
+  flex: 1 1 0;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+.footer-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .footer-logo {
   width: 120px;
-  border-radius: 8px;
   margin-bottom: 0.5rem;
+  border-radius: 8px;
 }
 .footer-frase {
   font-style: italic;
   color: #e94d1a;
   margin-top: 0.5rem;
   font-size: 1.1rem;
+  text-align: center;
 }
-.footer-contacto {
-  flex: 1 1 200px;
-  min-width: 180px;
-}
-.footer-contacto h4 {
+.footer-contacto h4, .footer-redes h4 {
   margin-bottom: 0.5rem;
   color: #e94d1a;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 .footer-contacto ul {
   list-style: none;
@@ -332,26 +346,36 @@
 .footer-contacto li {
   margin-bottom: 0.4rem;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .footer-contacto a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .footer-contacto a:hover {
   color: #3bb273;
 }
-.footer-redes {
-  flex: 1 1 180px;
-  min-width: 160px;
+.footer-icon-ico {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.3rem;
+  vertical-align: middle;
 }
-.footer-redes h4 {
-  margin-bottom: 0.5rem;
-  color: #e94d1a;
+.footer-redes {
+  width: 100%;
 }
 .redes-icons {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
 }
 .footer-icon img {
   width: 32px;
@@ -374,12 +398,16 @@
 @media (max-width: 900px) {
   .footer-flex {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
   }
-  .footer-brand, .footer-contacto, .footer-redes {
+  .footer-col {
     min-width: 0;
     width: 100%;
+    padding: 0.5rem 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 /* === PALETA DE COLORES ===
